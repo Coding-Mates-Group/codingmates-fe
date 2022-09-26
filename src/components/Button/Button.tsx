@@ -16,7 +16,7 @@ const Button = (props: Props) => {
       onClick={onClick}
       className={`bg-purple-main font-UncutSans rounded-full font-bold ${
         style === "large"
-          ? "text-4xl px-12 py-[9.5px]"
+          ? "text-4xl px-14 py-[9.5px]"
           : " text-2xl px-12 py-[9px]"
       }
       shadow-elevation-4 disabled:bg-monoGray flex items-center gap-6`}
