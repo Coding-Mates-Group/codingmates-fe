@@ -1,5 +1,5 @@
 import React from "react";
-import LogoSVG from "../public/logo.svg";
+import LogoSVG from "../../public/logo.svg";
 import Link from "next/link";
 
 const Navigation = () => {

@@ -1,9 +1,9 @@
 import Head from "next/head";
 import React, { FC } from "react";
-import layoutTypes from "../types/layout";
-import metaData from "../types/metaData";
+import layoutTypes from "../../types/layout";
+import metaData from "../../types/metaData";
 
-import defaultData from "../public/defaultData.json";
+import defaultData from "../../public/defaultData.json";
 import Navigation from "./Navigation";
 
 interface Props {
