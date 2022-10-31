@@ -16,21 +16,21 @@ export const CookieModal: ComponentStory<typeof Modal> = () => {
       closeModal={() => {
         return;
       }}
-      title="We use Cookies"
+      title="We use Cookies 🍪"
     >
       <div className="text-center mt-4">
-        <p className="text-black">
+        <p className="text-[#1E1E1E]">
           This web site use cookies to ensure
           <br /> you get the best experience on our website
         </p>
 
         <button
           type="button"
-          className={` mt-5 rounded-4 border border-purple-main
-          px-[115px] py-[10px] text-purple-main rounded-[15px]
+          className={` mt-5 bg-[#9374EC]
+          px-[66.5px] py-3 text-white rounded-[6px]
           shadow-elevation-3`}
         >
-          Button
+          Accept
         </button>
       </div>
     </Modal>

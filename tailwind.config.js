@@ -10,8 +10,7 @@ module.exports = {
         "purple-main": "rgba(77, 48, 220, 1)",
         secondary: "#C2F46F",
         monoBlack: "#000000",
-        "purple-dark":
-          "linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #4D30DC",
+        "purple-dark": "#2B1173",
         "monoBlack-500": "rgba(0,0,0,0.5)",
         monoGray: "rgba(204, 204, 204, 1)",
         "modal-bg": "rgba(255, 255, 255, 0.95)",

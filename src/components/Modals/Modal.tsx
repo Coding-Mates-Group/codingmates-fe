@@ -1,14 +1,16 @@
 import React, { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import CloseIcon from "../svg/CloseIcon";
 
 interface Props {
   open: boolean;
   children: React.ReactNode;
   closeModal: () => void;
   title?: string;
+  onClose: () => void;
 }
 
-const Modal = ({ open, children, closeModal, title }: Props) => {
+const Modal = ({ open, children, closeModal, title, onClose }: Props) => {
   return (
     <Transition appear show={open} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -36,21 +38,29 @@ const Modal = ({ open, children, closeModal, title }: Props) => {
               leaveTo="opacity-0 scale-95"
             >
               <Dialog.Panel
-                className={`w-[484px]
-                 transform overflow-hidden border-2 border-purple-main
+                className={`w-[484px] relative
+                 transform overflow-hidden pt-[60px] pb-10
                   bg-modal-bg p-6 text-left align-middle rounded-[15px]
                    shadow-xl transition-all`}
               >
                 {title && (
                   <Dialog.Title
                     as="h3"
-                    className="text-lg text-center font-bold leading-6 text-purple-main"
+                    className="text-lg text-center font-bold leading-6 text-[#1E1E1E]"
                   >
                     {title}
                   </Dialog.Title>
                 )}
 
                 {children}
+
+                <button
+                  type="button"
+                  onClick={onClose}
+                  className={`absolute top-[16px] right-[16px]`}
+                >
+                  <CloseIcon width={"16px"} height={"16px"} />
+                </button>
               </Dialog.Panel>
             </Transition.Child>
           </div>
