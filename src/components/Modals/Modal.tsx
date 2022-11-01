@@ -7,10 +7,9 @@ interface Props {
   children: React.ReactNode;
   closeModal: () => void;
   title?: string;
-  onClose: () => void;
 }
 
-const Modal = ({ open, children, closeModal, title, onClose }: Props) => {
+const Modal = ({ open, children, closeModal, title }: Props) => {
   return (
     <Transition appear show={open} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -56,7 +55,7 @@ const Modal = ({ open, children, closeModal, title, onClose }: Props) => {
 
                 <button
                   type="button"
-                  onClick={onClose}
+                  onClick={closeModal}
                   className={`absolute top-[16px] right-[16px]`}
                 >
                   <CloseIcon width={"16px"} height={"16px"} />
