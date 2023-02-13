@@ -1,12 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme');
 
+const spacing = Array(51)
+  .fill()
+  .reduce((acc, _, index) => {
+    const value = index * 2;
+    acc[value] = `${value / 10}rem`;
+    return acc;
+  }, {});
+
 module.exports = {
-  content: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    spacing,
     extend: {
+      fontSize: {
+        12: '1.2rem',
+        14: '1.4rem',
+        16: '1.6rem',
+        18: '1.8rem',
+        24: '2.4rem',
+        36: '3.6rem',
+      },
       fontFamily: {
-        sans: ['Uncut-sans', ...defaultTheme.fontFamily.sans],
+        sans: ['UncutSans', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         gray: {
