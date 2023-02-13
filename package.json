@@ -38,9 +38,13 @@
     "@storybook/react": "^6.5.16",
     "@storybook/testing-library": "0.0.13",
     "@svgr/webpack": "^6.5.1",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^8.3.0",
     "chromatic": "^6.15.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-storybook": "^0.6.10",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
@@ -49,5 +53,7 @@
   },
   "resolutions": {
     "webpack": "^5"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "codingmates-fe@0.1.0"
 }
