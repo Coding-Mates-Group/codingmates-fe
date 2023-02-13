@@ -7,8 +7,8 @@ module.exports = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
     '@storybook/addon-actions',
+    '@storybook/addon-interactions',
     {
       /**
        * Fix Storybook issue with PostCSS@8
@@ -33,6 +33,13 @@ module.exports = {
     reactDocgen: false,
   },
   webpackFinal: (config) => {
+    const fileLoaderRule = config.module.rules.find((rule) => rule.test && rule.test.test('.svg'));
+    fileLoaderRule.exclude = /\.svg$/;
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: ['@svgr/webpack'],
+    });
     /**
      * Add support for alias-imports
      * @see https://github.com/storybookjs/storybook/issues/11989#issuecomment-715524391
