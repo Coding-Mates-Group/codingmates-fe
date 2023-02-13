@@ -47,6 +47,7 @@ module.exports = {
     config.resolve.alias = {
       ...config.resolve?.alias,
       '@': [path.resolve(__dirname, '../src/'), path.resolve(__dirname, '../')],
+      '/public': [path.resolve(__dirname, '../public')],
     };
 
     /**
