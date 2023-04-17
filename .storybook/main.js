@@ -9,6 +9,7 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-actions',
     '@storybook/addon-interactions',
+    '@storybook/addon-a11y',
     {
       /**
        * Fix Storybook issue with PostCSS@8
