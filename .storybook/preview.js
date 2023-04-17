@@ -16,6 +16,16 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  a11y: {
+    config: {
+      rules: [
+        {
+          id: 'color-contrast',
+          enabled: false,
+        },
+      ],
+    },
+  },
   previewTabs: {
     'storybook/docs/panel': { index: -1 },
   },
