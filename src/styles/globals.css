@@ -13,6 +13,25 @@
     overflow: hidden;
     clip-path: polygon(0 0, 0 0, 0 0);
   }
+
+  .font-12 {
+    @apply text-12 leading-[2.2rem];
+  }
+  .font-14 {
+    @apply text-14 leading-[2.2rem];
+  }
+  .font-16 {
+    @apply text-16 leading-[2rem];
+  }
+  .font-18 {
+    @apply text-18 leading-[2.25rem];
+  }
+  .font-24 {
+    @apply text-24 leading-[3rem];
+  }
+  .font-36 {
+    @apply text-36 leading-[4.5rem] tracking-[-0.01em];
+  }
 }
 
 @font-face {
