@@ -7,7 +7,7 @@ interface ModalProps {
   children?: React.ReactNode;
   isOpen: boolean;
   onClose?: () => void;
-  isClose?: boolean;
+  hasCloseButton?: boolean;
   isBack?: boolean;
   className?: string;
 }
@@ -16,7 +16,7 @@ export default function Modal({
   children,
   isOpen,
   onClose,
-  isClose = false,
+  hasCloseButton = false,
   isBack = false,
   className,
 }: ModalProps) {
@@ -62,7 +62,7 @@ export default function Modal({
               <ArrowBack role="img" aria-label="back" />
             </button>
           ) : null}
-          {isClose ? (
+          {hasCloseButton ? (
             <button onClick={onClose} className="absolute top-16 right-16">
               <Close role="img" aria-label="close" />
             </button>
